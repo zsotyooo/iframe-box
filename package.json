@@ -1,6 +1,6 @@
 {
   "name": "iframe-box",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "http://github.com/zsotyooo/iframe-box.git"
@@ -8,6 +8,10 @@
   "author": {
     "name": "Zsolt Molnár"
   },
+  "keywords": ["javascript", "test", "testing", "iframe", "ui", "form"],
+  "description": "Iframe box is a small javascript tool created for testing user interfaces in Iframes.
+You can easily access any kind of information inside the Iframe.
+In addition You can manipulate forms, and form elements.",
   "bugs": {
     "url": "http://github.com/zsotyooo/iframe-box"
   },
