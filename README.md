@@ -1,13 +1,9 @@
-Ï# iframe-box
-Iframe sandbox is a small piece of javascript created for testing user interfaces. If uses iframes, jQuery, jQuery.simulate, and jQuery.populate
+# Iframe-box
+Iframe box is a small javascript tool created for testing user interfaces in Iframes.
+You can easily access any kind of information inside the Iframe.
+In addition You can manipulate forms, and form elements.
 
 [![NPM](https://nodei.co/npm/iframe-box.png)](https://nodei.co/npm/iframe-box/)
-
-This simple tool is mainly useful for testing purposes, although you can use it in your everyday javascript applications as well.
-
-You can easily access any kind of information inside the Iframe.
-
-In addition can manipulate forms, form elements as well.
 
 ## Using the Iframe box object
 ### Creating an Iframe box
