@@ -1,4 +1,4 @@
-# iframe-box
+Ï# iframe-box
 Iframe sandbox is a small piece of javascript created for testing user interfaces. If uses iframes, jQuery, jQuery.simulate, and jQuery.populate
 
 [![NPM](https://nodei.co/npm/iframe-box.png)](https://nodei.co/npm/iframe-box/)
@@ -158,21 +158,21 @@ In the examples I am using the `before`, or `beforeAll` hooks, with a `promise` 
 #### Simple usage
 ```javascript
 // ...
-var mySandbox;
+var testBox;
 before(function(done) {
-	mySandbox = new IBox;
-	mySandbox.visitPage('test.html', done);
+	testBox = new IBox;
+	testBox.visitPage('test.html', done);
 });
 after(function() {
-	mySandbox.destroy();
+	testBox.destroy();
 });
 
-it ('it has a body`, function() {
-    expect(mySandbox.$('body').length).to.be.eql(1);
+it ('it has a body', function() {
+    expect(testBox.$('body').length).to.be.eql(1);
 });
 
-it ('it uses jQuery`, function() {
-    expect(mySandbox.getVar('jQuery')).not.to.be.undefined;
+it ('it uses jQuery', function() {
+    expect(testBox.getVar('jQuery')).not.to.be.undefined;
 });
 ```
 
@@ -182,11 +182,11 @@ In these examples we are validating numbers, and an email address.
 
 ```javascript
 // ...
-var mySandbox;
+var testBox;
 before(function(done) {
-	mySandbox.visitPage('form.html', function(){
-        mySandbox = new IBox({iframeId: 'testIframe'});
-        form = mySandbox.getForm('#testform');
+	testBox.visitPage('form.html', function(){
+        testBox = new IBox({iframeId: 'testIframe'});
+        form = testBox.getForm('#testform');
         form.populate({
             number1: 3,
             number2: 'Asd'
@@ -196,7 +196,7 @@ before(function(done) {
     });
 });
 after(function() {
-	mySandbox.destroy();
+	testBox.destroy();
 });
 
 it ('it validates the number to be OK', function() {
@@ -208,11 +208,11 @@ it ('it validates the string to be worng', function() {
 ```
 ```javascript
 // ...
-var mySandbox;
+var testBox;
 before(function(done) {
-	mySandbox.visitPage('form.html', function(){
-        mySandbox = new IBox({iframeId: 'testIframe'});
-        form = mySandbox.getForm('#testform');
+	testBox.visitPage('form.html', function(){
+        testBox = new IBox({iframeId: 'testIframe'});
+        form = testBox.getForm('#testform');
         form.getFormElement('input[name="email"]')
         .simulate(
             'key-sequence',
@@ -227,7 +227,7 @@ before(function(done) {
     });
 });
 after(function() {
-	mySandbox.destroy();
+	testBox.destroy();
 });
 
 it ('it validates the email to be OK', function() {
