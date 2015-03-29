@@ -9,9 +9,7 @@
     "name": "Zsolt Molnár"
   },
   "keywords": ["javascript", "test", "testing", "iframe", "ui", "form"],
-  "description": "Iframe box is a small javascript tool created for testing user interfaces in Iframes.
-You can easily access any kind of information inside the Iframe.
-In addition You can manipulate forms, and form elements.",
+  "description": "Iframe box is a small javascript tool created for testing user interfaces in Iframes. You can easily access any kind of information inside the Iframe. In addition You can manipulate forms, and form elements.",
   "bugs": {
     "url": "http://github.com/zsotyooo/iframe-box"
   },

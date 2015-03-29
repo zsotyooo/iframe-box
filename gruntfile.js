@@ -18,10 +18,6 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        var: {
-            packageName: 'iframe-box',
-            version: '0.1.0'
-        },
         uglify: {
             min: {
                 options: {
@@ -30,8 +26,8 @@ module.exports = function(grunt) {
                     beautify: false
                 },
                 files: {
-                    'dist/<%= var.packageName %>.<%= var.version %>.only.min.js': jsFiles,
-                    '<%= var.packageName %>.only.min.js': jsFiles
+                    'dist/<%= pkg.name %>.<%= pkg.version %>.only.min.js': jsFiles,
+                    '<%= pkg.name %>.only.min.js': jsFiles
                 }
             },
             dev: {
@@ -42,8 +38,8 @@ module.exports = function(grunt) {
                     preserveComments: 'some'
                 },
                 files: {
-                    'dist/<%= var.packageName %>.<%= var.version %>.only.js': jsFiles,
-                    '<%= var.packageName %>.only.js': jsFiles
+                    'dist/<%= pkg.name %>.<%= pkg.version %>.only.js': jsFiles,
+                    '<%= pkg.name %>.only.js': jsFiles
                 }
             },
             withdeps: {
@@ -53,8 +49,8 @@ module.exports = function(grunt) {
                     beautify: false
                 },
                 files: {
-                    'dist/<%= var.packageName %>.<%= var.version %>.min.js': jsFilesWithDependencies,
-                    '<%= var.packageName %>.min.js': jsFilesWithDependencies
+                    'dist/<%= pkg.name %>.<%= pkg.version %>.min.js': jsFilesWithDependencies,
+                    '<%= pkg.name %>.min.js': jsFilesWithDependencies
                 }
             },
             withdepsdev: {
@@ -65,8 +61,8 @@ module.exports = function(grunt) {
                     preserveComments: 'some'
                 },
                 files: {
-                    'dist/<%= var.packageName %>.<%= var.version %>.js': jsFilesWithDependencies,
-                    '<%= var.packageName %>.js': jsFilesWithDependencies
+                    'dist/<%= pkg.name %>.<%= pkg.version %>.js': jsFilesWithDependencies,
+                    '<%= pkg.name %>.js': jsFilesWithDependencies
                 }
             },
         },
