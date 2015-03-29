@@ -178,8 +178,9 @@ In these examples we are validating numbers, and an email address.
 
 ```javascript
 // ...
-var testBox;
+var testBox, form;
 before(function(done) {
+    testBox = new IBox;
 	testBox.visitPage('form.html', function(){
         testBox = new IBox({iframeId: 'testIframe'});
         form = testBox.getForm('#testform');
@@ -204,7 +205,7 @@ it ('it validates the string to be worng', function() {
 ```
 ```javascript
 // ...
-var testBox;
+var testBox, form;
 before(function(done) {
 	testBox.visitPage('form.html', function(){
         testBox = new IBox({iframeId: 'testIframe'});
